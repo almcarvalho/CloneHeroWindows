@@ -53,6 +53,7 @@ START       -> START
 
 
 Lista de peças:
+
 https://www.robocore.net/protoboard/protoboard-400-pontos
 
 https://www.robocore.net/botao-chave/kit-push-button-com-capas-coloridas-x25-unidades
@@ -68,16 +69,24 @@ https://www.robocore.net/cabo/cabo-usb-ab-30cm
 https://www.robocore.net/cabo/jumpers-macho-macho-x40-cabos
 
 Opcional:
+
 https://www.robocore.net/ferramentas/kit-solda-110v
 
 CONECTOR DE 5 VIAS (Para os padas)
+
 Conector de 2 VIAS (Para o bumbo)
 
 COLA QUENTE
+
 BASTÃO DE COLA QUENTE
+
 FITA ADESIVA
+
 ESPUMAS
+
 CAPS DE CANOS DE PVC
+
 CABO CAT5 (CABO DE INTERNET) 3 METROS
+
 
 Compre na robocore.net use o cupom: LCSISTEMAS
