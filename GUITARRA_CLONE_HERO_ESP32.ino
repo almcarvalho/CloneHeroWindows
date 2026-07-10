@@ -4,6 +4,8 @@
 
 //=============================
 // GUITARRA CLONE HERO ESP32
+// RODA COM PEQUENO DELAY (NO FÁCIL ATÉ DÁ)
+// MELHOR SERIA COM ARDUINO UNO LANÇANDO OS BYTES NA PORTA SERIAL!
 // Portal WiFi SEM SENHA
 // UDP PORT 5000
 //=============================
