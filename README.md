@@ -1,6 +1,12 @@
-# Clone Hero Com arduino
+# Clone Hero Com ARDUINO
 
-Projeto simples para usar guitarra ou bateria feita com ESP32/ARDUINO no Clone Hero. 
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/b966f8a4-64e7-45b3-b93b-039ac5113ecb" />
+
+
+Projeto simples para usar guitarra ou bateria feita com ESP32/ARDUINO no jogo Clone Hero. 
+
+https://clonehero.net/
+
 Inicialmente usamos a abordagem de conectar os instrumentos no ESP32 e mandar pela wifi usando udp,
 Depois, percebemos que os delays estavam bem ruins e atrapalhando bastante,
 passamos a usar uma placa arduino lendo botões, push buttons do grande, e escrevendo na serial
