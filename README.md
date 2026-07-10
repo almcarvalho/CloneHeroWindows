@@ -54,15 +54,22 @@ START       -> START
 
 Lista de peças:
 https://www.robocore.net/protoboard/protoboard-400-pontos
+
 https://www.robocore.net/botao-chave/kit-push-button-com-capas-coloridas-x25-unidades
+
 https://www.robocore.net/ferramentas/alicate-de-corte-de-precisao
+
 https://www.robocore.net/ferramentas/fita-isolante-3m-preta
+
 https://www.robocore.net/placa-arduino/placa-uno-r3
+
 https://www.robocore.net/cabo/cabo-usb-ab-30cm
+
 https://www.robocore.net/cabo/jumpers-macho-macho-x40-cabos
 
 Opcional:
 https://www.robocore.net/ferramentas/kit-solda-110v
+
 CONECTOR DE 5 VIAS (Para os padas)
 Conector de 2 VIAS (Para o bumbo)
 
