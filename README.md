@@ -1,15 +1,15 @@
-# Clone Hero ESP32 UDP
+# Clone Hero Com arduino
 
-Projeto simples para usar guitarra ou bateria feita com ESP32 no Clone Hero. O ESP32 le os botoes e envia comandos por UDP para este script Python, que aperta teclas no Windows.
+Projeto simples para usar guitarra ou bateria feita com ESP32/ARDUINO no Clone Hero. 
+Inicialmente usamos a abordagem de conectar os instrumentos no ESP32 e mandar pela wifi usando udp,
+Depois, percebemos que os delays estavam bem ruins e atrapalhando bastante,
+passamos a usar uma placa arduino lendo botões, push buttons do grande, e escrevendo na serial
+o programa em python monitora a porta serial e clica nos botões do controle virtual usando a
+lib vigebus
 
 ## O que precisa
 - Emulador de controle vigembus instalado no windows e dps reiniciar o pc (https://vigembus.com/ )
-- ESP32 
 - Arduino IDE
-- Bibliotecas Arduino:
-  - `WiFiManager`
-  - `WiFi`
-  - `WiFiUdp`
 - Python 3.11 instalado no PC
 - Clone Hero instalado (Jogo)
 
@@ -21,52 +21,10 @@ No terminal, dentro desta pasta:
  pip install vgamepad
 ```
 
-## Configurar o ESP32
-
-1. Abra o codigo do ESP32 na Arduino IDE.
-2. Instale a biblioteca `WiFiManager` pelo Library Manager.
-3. Confira a porta UDP:
-
-```cpp
-const int PORTA_UDP = 4210;
-```
-
-4. Para mais estabilidade, envie direto para o IP do PC. Exemplo:
-
-```cpp
-IPAddress broadcastIP(10, 0, 0, 195);
-```
-
-Use o IPv4 do seu PC, visto no `ipconfig`.
-
-5. Grave o codigo no ESP32.
-6. Se ele abrir o portal Wi-Fi, conecte no Wi-Fi criado pelo ESP32, por exemplo `GUITARRA_CLONE_HERO` ou `DRUMS`, e escolha sua rede.
-
-## Rodar o receptor Python
-
 Nesta pasta, execute:
 
 ```bash
 python hero.py
-```
-
-Ele deve mostrar:
-
-```text
-Aguardando guitarra ESP32...
-Porta UDP: 4210
-```
-
-Quando apertar botoes no ESP32, devem aparecer mensagens como:
-
-```text
-('10.0.0.xxx', 4210) -> GREEN:DOWN
-```
-
-Para bateria, pode aparecer algo como:
-
-```text
-('10.0.0.xxx', 4210) -> DRUM_RED:DOWN
 ```
 
 ## Mapeamento da guitarra
@@ -77,8 +35,8 @@ RED    -> S
 YELLOW -> J
 BLUE   -> K
 ORANGE -> L
-STRUM  -> seta para cima
-START  -> seta para baixo
+STRUM  -> STRUM DOWN SETA PRA BAIXO
+START  -> START
 ```
 
 ## Mapeamento da bateria
@@ -88,23 +46,31 @@ DRUM_RED    -> S
 DRUM_YELLOW -> J
 DRUM_BLUE   -> K
 DRUM_GREEN  -> A
-DRUM_ORANGE -> L
-KICK        -> espaco
-START       -> seta para baixo
+DRUM_ORANGE -> BUMBO
+KICK        -> STRUM DONW (SETA PRA BAIXO)
+START       -> START
 ```
 
-Configure essas mesmas teclas dentro do Clone Hero.
-
-## Se nao funcionar
-
-- Confirme que o PC e o ESP32 estao na mesma rede Wi-Fi.
-- Confirme que o IP no codigo do ESP32 e o IPv4 correto do PC.
-- Libere o Python no Firewall do Windows.
-- Confira se a porta e a mesma nos dois codigos: `4210`.
-- Rode o `hero.py` antes de apertar os botoes.
 
 Lista de peças:
+https://www.robocore.net/protoboard/protoboard-400-pontos
+https://www.robocore.net/botao-chave/kit-push-button-com-capas-coloridas-x25-unidades
+https://www.robocore.net/ferramentas/alicate-de-corte-de-precisao
+https://www.robocore.net/ferramentas/fita-isolante-3m-preta
+https://www.robocore.net/placa-arduino/placa-uno-r3
+https://www.robocore.net/cabo/cabo-usb-ab-30cm
+https://www.robocore.net/cabo/jumpers-macho-macho-x40-cabos
 
-Em breve...
+Opcional:
+https://www.robocore.net/ferramentas/kit-solda-110v
+CONECTOR DE 5 VIAS (Para os padas)
+Conector de 2 VIAS (Para o bumbo)
+
+COLA QUENTE
+BASTÃO DE COLA QUENTE
+FITA ADESIVA
+ESPUMAS
+CAPS DE CANOS DE PVC
+CABO CAT5 (CABO DE INTERNET) 3 METROS
 
 Compre na robocore.net use o cupom: LCSISTEMAS
